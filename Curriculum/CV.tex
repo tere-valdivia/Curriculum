@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,verdana]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.8]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%   NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Mar\'ia Teresa} % Your first name
+\familyname{Valdivia Mena} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+
+\title{Curriculum Vitae}
+\address{Camino del Observatorio 1515, Las Condes, Santiago}
+\mobile{+56 9 68467981}
+\phone{+56 2 23214975}
+\email{maria.valdivia@ug.uchile.cl}
+%\homepage{bd.linkedin.com/pub/mainuddin-talukdar/93/1b4/a13/} {bd.linkedin.com/pub/mainuddin-talukdar/93/1b4/a13/}% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\extrainfo{}
+%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Educaci\'on Universitaria}
+\cventry{2018 - Presente}{Mag\'ister en Ciencias Menci\'on Astronom\'ia}{Universidad de Chile}{Chile}{}{}
+\cventry{2014 - 2017}{Licenciatura en Ciencias Menci\'on Astronom\'ia}{Universidad de Chile}{Chile}{}{}
+\cventry{2016 - 2017}{Minor en Computaci\'on Cient\'ifica}{Universidad de Chile}{Chile}{}{}
+ % Arguments not required can be left empty
+
+\section{Educaci\'on B\'asica y Media}
+\cventry{2012 - 2013}{Bachillerato Internacional (IB)}{Colegio Santiago College}{Chile}{\break Cursos Nivel Superior: F\'isica, Matem\'aticas e Ingl\'es (Literatura). Cursos Nivel Medio: Lenguaje Espa\~nol, Biolog\'ia y Psicolog\'ia}{}
+\cventry{2000 - 2013}{Educaci\'on B\'asica y Media}{Colegio Santiago College}{Chile}{}{}
+
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experiencia Laboral y Acad\'emica}
+\cventry{\small{Septiembre 2018 - Presente}}{Profesora Auxiliar del curso de Astronom\'ia Experimental}{Universidad de Chile}{}{}{\break El/ la auxiliar hace clases demostrativas con ejercicios complementarios a la materia de c\'atedra, se encarga de guiar el trabajo en los laboratorios de computaci\'on para el desarrollo de tres proyectos relacionados con astronom\'ia experimental y eval\'ua los informes resultantes de cada grupo.}
+\cventry{\small{Marzo 2019 - Julio 2019}}{Profesora Auxiliar del curso de Introducci\'on a la Cosmolog\'ia}{Universidad de Chile}{}{}{\break El/ la auxiliar hace clases demostrativas con ejercicios complementarios a la materia de c\'atedra y se encarga de corregir las evaluaciones.}
+\cventry{\small{Julio 2018 - Julio 2019}}{Profesora particular}{Santiago, Chile}{}{}{Apoyo para el Bachillerato Internacional (F\'isica HL)}
+\cventry{\small{Junio 2018 - Noviembre 2018}}{\textbf{Asesora cient\'ifica}}{Liceo Polivalente San Jos\'e de Maipo}{Festival de Teatro y Ciencias}{Par Explora Sur Oriente, CONICYT}{\break El/la asesor/a cient\'ifico/a se encarga de guiar a los alumnos participantes de la competencia con respecto a los contenidos cient\'ificos que deseen abordar en su obra. Debe fomentar el pensamiento cr\'itico y la b\'usqueda independiente de informaci\'on.}
+\cventry{\small{Marzo 2018 - Agosto 2018}}{Trabajos de Extensi\'on y Gu\'ia Tur\'istica en el Observatorio Astron\'omico Nacional}{Universidad de Chile}{}{}{}
+\cventry{\small{Septiembre 2017 - Octubre 2017}}{Ayudante de laboratorio en Diplomado en Visualizaci\'on de Datos}{Pontificia Universidad Cat\'olica de Chile}{}{}{\break El/la ayudante se encarga de resolver dudas de forma presencial y guiar el trabajo complementario del curso.}
+\cventry{\small{Marzo 2017 - Julio 2017}}{Profesora Auxiliar del curso de Mec\'anica}{Universidad de Chile}{}{}{\break El/ la auxiliar hace clases con ejercicios complementarios a la materia de c\'atedra y se encarga de tomar y revisar las evaluaciones a los alumnos.}
+\cventry{\small{Enero 2017}}{Pr\'actica de Investigaci\'on}{Observatorio Astron\'omico Nacional}{Universidad de Chile}{}{\break An\'alisis datos de emisiones de mon\'oxido de carbono y obtenci\'on de las caracter\'isticas f\'isicas de una regi\'on de nubes moleculares en el Puente de Magallanes.} %REVISAR
+\cventry{\small{Marzo 2015 - Diciembre 2016}}{Ayudante de laboratorio del curso de Introducci\'on a la Ingenier\'ia (I y II)}{Universidad de Chile}{}{}{\break El/la ayudante est\'a cargo de la evaluaci\'on y ense\~nanza de trabajo en taller de 2 a 3 grupos de 5 personas cada uno, por cada semestre. Se realiz\'o asistencia presencial a los grupos y evaluaci\'on en informes, trabajos pr\'acticos, resultados y trabajo en equipo.}
+\cventry{\small{Enero 2014}}{Asistente de Bodega}{Mediplex S.A.}{}{}{\break El/la asistente se encarga de la clasificaci\'on de insumos para su despacho y la emisi\'on de las facturas correspondientes.}
+
+
+%------------------------------------------------
+
+\section{Habilidades computacionales}
+
+\cvitem{\textbf{\small{Lenguajes}}}{{Python}, {Java}, {C}, {Matlab/Octave}, {R}}
+\cvitem{\textbf{\small{SO}}}{Windows, Linux, OS X}
+\cvitem{\textbf{\small{Lenguajes de Script}}}{HTML}
+%\cvitem{Platforms/ Framework}{.NET, ASP.NET MVC - 4, Android - 4.2 (Jelly Beans) and 4.4 (KitKat), CodeIgniter - v6.1, Bootstrap - v3.2, }
+%\cvitem{Game Engine} {LibGDX - v1.0}
+%\cvitem{Database}{MySQL, Oracle 11G Enterprise}% * <bit0428@iit.du.ac.bd> 2014-10-21T07:54:10.585Z:
+%
+
+\cvitem{\textbf{\small{Programas de desarrollo}}}{Atom, Eclipse, Spyder, RStudio}
+\cvitem{\textbf{\small{Tesiting Tools}}} {JUnit}
+\cvitem{\textbf{\small{Version Controlling Tool}}}{GitHub URL - "https://github.com/tere-valdivia"}
+\cvitem{\textbf{\small{Otros}}}{CASA (Common Astronomy Software Applications), GILDAS, SAOImage DS9, Photoshop, LaTeX}
+%\cvitem{Problem Solving}{UVA - 52 URL - "uhunt.felix-halim.net/id/164673", LightOJ - 37}
+%\cvitem{\textbf{\small{Conceptos}}} {Structured Programming, Object Oriented Programming, Design Pattern and Refactoring}
+
+
+%----------------------------------------------------------------------------------------
+%   AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Cursos adicionales, asistencias a congresos y afines}
+
+\cventry{Octubre 2018}{Second Binational AAA-SOCHIAS Meeting}{Hotel Club La Serena}{La Serena, Chile}{\textbf{Contribuci\'on Mural}: \textit{Molecular Clouds Resolved in $^{12}CO(1-0)$ and  $^{12}CO(2-1)$ in the Magellanic Bridge}}{}
+\cventry{Octubre 2018}{II International Astrochemistry School}{Universidad Aut\'onoma de Chile}{Santiago, Chile}{}{}
+\cventry{Agosto 2018}{La Serena School for Data Science: Applied Tools for Data Driven Sciences}{Association of Universities for Research in Astronomy (AURA) Campus}{La Serena, Chile}{\textbf{Proyecto}: \textit{Global Obesity Prevalence: Important Factors and Characteristics}}{}
+\cventry{Agosto 2017}{III Congreso de Estudiantes de Ciencias F\'isicas y Astron\'omicas}{Universidad de La Serena}{La Serena, Chile}{}{}
+\cventry{Marzo 2017}{Workshop de Estudiantes de Astronom\'ia}{Observatorio Astron\'omico Nacional}{Santiago, Chile}{\textbf{Charla}: \textit{Characterizations of CO Emissions in MagBridgeC}}{}
+
+\section{Premios y Equipos de competencia}
+\cvitem{2015-2016}{Alumno destacado, Licenciatura en Ciencias, Menci\'on Astronom\'ia}
+\cvitem{2014}{Alumno destacado, Plan Com\'un}
+\cvitem{2011-2012}{Preselecci\'on Nacional para las Olimpiadas de F\'isica}
+
+\section{Otros intereses y Actividades}
+\cventry{\small{Marzo 2018 - Presente}}{\textbf{Jornadas para ense\~nanza media}}{Encargada de clases de Programaci\'on}{Programa ``Cazadoras de Estrellas: Jornadas de Astronom\'ia para alumnas de ense\~nanza media"}{ESO}{}
+\cventry{\small{Septiembre 2016 - Diciembre 2017}}{\textbf{Sustentabilidad}}{Delegada de Sustentabilidad de AFIAS, Centro de Estudiantes de Ingenier\'ia}{Universidad de Chile}{}{}
+\cventry{\small{Marzo 2017 - Julio 2018}}{\textbf{Juegos de Rol y de Mesa}}{Miembro de directiva del Club de Rol de InJenier\'ia}{Universidad de Chile}{}{}
+\cventry{\small{2012}}{\textbf{Centro de Estudiantes}}{Miembro de la Comisi\'on de Servicio Social}{Santiago College}{}{}
+\cventry{\small{2005-2012}}{\textbf{Scouts}}{Miembro del Grupo de Gu\'ias y Scouts del Santiago College}{Distrito Los Leones}{Santiago}{}
+
+\section{Referencias}
+
+\cventry{}{\textbf{M\'onica Rubio}}{Ph.D en Astrof\'isica}{Profesora Titular}{Departamento de Astronom\'ia, Universidad de Chile}{mrubio@das.uchile.cl}
+\cventry{}{\textbf{Patricio Cordero}}{Ph.D en F\'isica}{Profesor Titular}{Departamento de F\'isica, Universidad de Chile}{pcordero@ing.uchile.cl}
+\cventry{}{\textbf{Mauricio Vargas}}{Data Analyst}{Datawheel LLC}{Cambridge, USA}{mvargas@dcc.uchile.cl}
+
+%----------------------------------------------------------------------------------------
+%   COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+
+    
+\end{document}
