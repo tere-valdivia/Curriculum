@@ -1,193 +1,117 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% https://github.com/posquit0/Awesome-CV
 %
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[11pt,a4paper,verdana]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+% Specify the location of the included fonts
+\fontdir[fonts/]
 
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-emerald}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
-\usepackage[scale=0.8]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
 
-%----------------------------------------------------------------------------------------
-%   NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-
-\firstname{Mar\'ia Teresa} % Your first name
-\familyname{Valdivia Mena} % Your last name
-
-% All information in this block is optional, comment out any lines you don't need
-
-\newcommand{\cvdoublecolumn}[2]{%
-  \cvitem[0.75em]{}{%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
-    }%
-}
-
-
-\newcommand{\cvreference}[7]{%
-    \textbf{#1}\newline% Name
-    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
-    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
-    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
-    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
-    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-\title{Curriculum Vitae}
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+\name{Maria Teresa}{Valdivia-Mena}
+%\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
 \address{Giessenbachstrasse 1, 85748 Garching, Germany}
+
 \mobile{+49 (0)89 30000-3546}
-%\phone{+56 2 23214975}
 \email{mvaldivi@mpe.mpg.de}
-\homepage{https://tere-valdivia.github.io/}% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-%\extrainfo{}
-%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-%\quote{"A witty and playful quotation" - John Smith}
+%\dateofbirth{January 1st, 1970}
+\homepage{tere-valdivia.github.io}
+\github{tere-valdivia}
+%\linkedin{posquit0}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{medium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
 
-%----------------------------------------------------------------------------------------
+%\quote{``Be the change that you want to see in the world."}
 
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
-\makecvtitle % Print the CV title
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
 
-%----------------------------------------------------------------------------------------
-%   EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\cventry{Sep 2020 - Present}{PhD (Dr. rer. nat) in Astrophysics}{Max Planck Institut f\"{u}r Extraterrestrische Physik - Ludwig Maximilians Universit\"{a}t}{Garching Germany}{\textbf{Currently enrolled through the International Max Planck Research School}}{} %
-\cventry{Mar 2018 - Aug 2020}{Master of Science in Astronomy}{Universidad de Chile}{Santiago, Chile}{\textbf{Thesis Title: }Molecular Clouds in Extreme Enviroments of the Low-Metallicity Magellanic System}{} %
-\cventry{Mar 2014 - Dec 2017}{Bachelor of Science in Astronomy}{Universidad de Chile}{Santiago, Chile}{Graduated with Highest Distinction}{Also obtained a Minor in Scientific Computing during the same period}
-\cventry{Mar 2012 - Dec 2013}{International Baccalauereate (IB) Diploma}{Santiago College School}{Santiago, Chile}{}{High Level: Physics, Mathematics and English (Literature). }% Standard Level: Spanish (Language and Literature), Biology and Psychology
-
-\section{Research Interests}
-
-\begin{itemize}
-      \item{Kinematic properties of gas around embedded protostars}
-       \item {Asymmetric infall mechanisms from the natal core and beyond towards protostellar disks}
-       \item {Molecular emission properties of the Interstellar Medium}
-       \item{Embedded stages of low-mass star formation}
-\end{itemize}
-
-\section{Publications}
-\cventry{Nov 2022}{PRODIGE - Envelope to disk with NOEMA I. A 3000 au streamer feeding a Class I protostar}{Valdivia-Mena, M.~T. , Pineda, J.~E., Segura-Cox, D.~M., Caselli, P. et. al.}{Astronomy \& Astrophysics, 667, A12}{}{}
-\cventry{Sep 2020}{ALMA resolves molecular clouds in metal-poor Magellanic Bridge A}{Valdivia-Mena, M.~T., Rubio, M., Bolatto, A.~D, Salda{\~n}o, H.~P. and Verdugo, C.}{Astronomy \& Astrophysics, 641, A97}{}{} 
-\cventry{Aug 2019}{Molecular Clouds resolved with ALMA $^{12}$CO J=1-0 and J=2-1 observations towards the Magellanic Bridge}{Valdivia, M.~T., Mu{\~n}oz, M., Rubio, M. and Salda{\~n}o, H.}{Bolet\'in de la Asociaci\'on Argentina de Astronom\'ia, 61, 134-136}{}{} %
-%\cventry{}{Submillimeter Excess in Magellanic Bridge A}{Valdivia, M.~T. et. al. in prep.}{}{}{} %
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {}
+  {Maria Teresa Valdivia-Mena}
+  {\thepage}
 
 
-\section{Presentations}
-\subsection{Seminars}
-\cventry{Dec 12th 2022}{Tuesday UVa / NRAO Astronomy (TUNA) Lunch Talk}{NRAO and Virtual}{}{\textbf{Talk:} \textit{Rivers in the sky: streamers discovered towards two young embedded sources in Perseus}}{}
-
-\cventry{Dec 12th 2022}{IRAM-Wisc-CAS Seminar}{Virtual}{}{\textbf{Talk:} \textit{Rivers in the sky: streamers discovered towards two young embedded sources in Perseus}}{}
-
-\cventry{Nov 8th 2022}{Star and Planet Formation Seminar}{ESO Garching and Virtual}{}{\textbf{Talk:} \textit{Rivers in the sky: streamers discovered towards two Class I sources in Perseus}}{}
-
-\subsection{Conferences}
-\cventry{Aug  3rd - 7th, 2022}{From Clouds to Planets II: The Astrochemical Link}{Harnack Haus}{Berlin, Germany}{\textbf{Talk:} \textit{Rivers in the sky: streamers discovered towards two Class I sources in Perseus}}{}
-\cventry{Jun 27th - Jul 1st, 2022}{European Astronomical Society Annual Meeting 2022}{Palau de Congresos}{Valencia, Spain}{\textbf{Talk:} \textit{Rivers in the sky: Streamers discovered towards two embedded protostars in Perseus}}{}
-\cventry{Apr 4th - 6th, 2022}{Multi-line Diagnostics of the Interstellar Medium}{Hotel Le Saint Paul}{Nice, France}{\textbf{Poster:} \textit{River in the sky: the first streamer feeding a Class I protostar}}{}
-\cventry{Mar 2nd - 4th, 2022}{Meeting of ALMA Young Astronomers}{Virtual}{European ALMA Regional Centre Network}{\textbf{Talk:} \textit{Rivers in the sky: streamers discovered towards two Class I sources in Perseus}}{}
-\cventry{Nov 4th - 5th, 2021}{12th IMPRS Students Symposium}{Max Planck Institute for Astrophyics}{Garching, Germany}{\textbf{LOC member and Talk:} \textit{River in the sky: A streamer feeding a Class I protostar}}{}
-\cventry{Oct 4th - 29th, 2021}{Gaps, Rings, Spirals, and Vortices: Structure Formation in Planet-Forming Disks}{Munich Institute for Astro- and Particle Physics}{Garching, Germany}{\textbf{Talk:} \textit{A Class I protostar with a high streamer mass infall rate}}{}
-\cventry{Jun 28th - Jul 2nd, 2021}{European Astronomical Society Annual Meeting 2021}{Virtual}{Leiden, Netherlands}{\textbf{Talk:} \textit{River in the sky: A streamer feeding a Class I protostar}}{}
-\cventry{Nov 3th - 9th, 2019}{Latin American Regional IAU Meeting 2019}{Hotel Antofagasta}{Antofagasta, Chile}{\textbf{Talk:} \textit{ALMA observations of molecular tracers in R136 in 30Dor: How does cold gas survive?}}{}
-\cventry{Oct 14th - 18th, 2019}{ALMA2019: Science Results and Cross-Facility Synergies}{T-Hotel Cagliari}{Cagliari, Italy}{\textbf{Poster (Co-Authored with M. Rubio)}: \textit{Cold Gas Survives near R136 in 30 Doradus}}{}
-\cventry{Oct 7th - 12th, 2018}{Second Binational AAA-SOCHIAS Meeting}{Hotel Club La Serena}{La Serena, Chile}{\textbf{Poster}: \textit{Molecular Clouds Resolved in $^{12}CO(1-0)$ and  $^{12}CO(2-1)$ in the Magellanic Bridge}}{}
-%\cventry{Aug 9-12th, 2017}{III Congreso de Estudiantes de Ciencias F\'isicas y Astron\'omicas}{Universidad de La Serena}{La Serena, Chile}{}{}
-
-\section{Observing Experience}
-\begin{itemize}
- \item \textbf{Atacama Large Millimeter/Submillimeter Array (ALMA)}: PI of accepted project 2022.1.00898.S (grade C) ``Quest for the source: connecting a filament to infalling gas towards a protostar in Barnard 5" plus experience with calibration and imaging.
-  \item \textbf{Northern Extended Millimetre Array (NOEMA)}: PI of accepted project W22AH (grade A) ``The connection between streamer and protostellar disk in Per-emb-50" plus experience with calibration and imaging.
- \item \textbf{Green Bank Telescope (GBT)}: PI and on-site observer of accepted project GBT22B-163 ``Mind the gap: connecting the scales between filaments and protostars" (2022B). Also obtained qualification as remote observer.
- \item \textbf{IRAM 30m}: PI of accepted project 124-21 ``Go with the flow? Streamer vs. envelope mass infall towards a Class I protostar" (2022A) and remote observing experience for this project. On-site and remote observing experience for project 090-21 (PI: J. Pineda), where I participate as Co-I. Additionally, experience with reduction using CLASS.
- \item \textbf{Atacama Pathfinder Explorer (APEX)}: PI of accepted project C104-9709 (2019B). On-site observer for Chilean time in three occasions: June 2017 (2017A), April 2018 (2018A) and May 2019 (2019A). Additionally, experience with reduction using CLASS.
-\end{itemize}
-
-\section{Workshops}
-\cventry{Aug 22th - 26th, 2022}{17th IMPRS Heidelberg Astronomy Summer School: Astronomy, astrochemistry \& the origin of life}{Heidelberg, Germany}{International Max Planck Research School for Astronomy and Cosmic Physics, University of Heidelberg}{}{}
-\cventry{Aug 3rd - 5th, 2022}{Green Bank Telescope (GBT) Remote Observer Training Workshop}{Virtual Workshop}{NRAO}{}{}
-\cventry{Nov 15th - 23rd, 2021}{10th IRAM 30-meter School on Millimeter Astronomy}{Virtual Workshop}{Institut de Radioastronomie Millim\'etrique}{}{}
-\cventry{Mar 14th - 19th, 2021}{2021 Submillimeter Array Interferometry School}{Virtual Workshop}{Harvard \& Smithsonian Center for Astrophysics, in conjunction with the ASIAA and the University of Hawaii}{}{}
-\cventry{Oct 7th - 11th, 2019}{European Radio Interferometry School 2019}{Gothenburg, Sweden}{Onsala Space Observatory and Chalmers University of Technology}{}{}
-\cventry{Oct 1st - 5th, 2018}{II International Astrochemistry School}{Universidad Aut\'onoma de Chile, Santiago, Chile}{Universidad Aut\'onoma de Chile}{}{}
-\cventry{Aug 20 - 29th, 2018}{La Serena School for Data Science: Applied Tools for Data Driven Sciences}{La Serena, Chile}{Association of Universities for Research in Astronomy, National Science Foundation (USA) and Agencia Nacional de Investigaci\'on y Desarrollo (Chile)}{}{}
-%\cventry{Mar 6-7th, 2017}{Workshop de Estudiantes de Astronom\'ia}{Observatorio Astron\'omico Nacional}{Santiago, Chile}{\textbf{Talk}: \textit{Characterizations of CO Emissions in MagBridgeC}}{}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cvsections/education.tex}
+\input{cvsections/researchinterest.tex}
+\input{cvsections/publications.tex}
+\input{cvsections/talks.tex}
+\input{cvsections/observing.tex}
+\input{cvsections/workshops.tex}
+\input{cvsections/outreach.tex}
+\input{cvsections/teaching.tex}
+\input{cvsections/skills.tex}
+\input{cvsections/awards.tex}
+\input{cvsections/service.tex}
+\input{cvsections/references.tex}
+%\input{cv/committees.tex}
 
 
-\section{Teaching Experience}
-
-\cventry{\small{Sep 2018 - Jul 2019}}{Teaching Assistant for the course "Experimental Astronomy"}{Universidad de Chile}{Includes giving classes, marking and supervising activities}{Undergraduate course}{}
-\cventry{\small{Mar 2019 - Jul 2019}}{Teaching Assistant for the course "Introduction to Cosmology"}{Universidad de Chile}{Includes giving classes and marking}{Undergraduate course}{}
-\cventry{\small{Jan 2019}}{Teaching Assistant for Universidad de Chile's Summer School}{Escuela de Verano, Universidad de Chile}{Course: Planetary Sciences}{High School level}{}
-\cventry{\small{Sep 2017 - Oct 2017}}{Teaching Assistant for the Data Visualization Diploma}{Pontificia Universidad Cat\'olica de Chile}{Diploma Course}{}{}
-\cventry{\small{Mar 2017 - Jul 2017}}{Teaching Assistance for the course "Mechanics"}{Universidad de Chile}{Includes giving classes and marking}{Undergraduate Course}{}
-
-%------------------------------------------------
-
-\section{Outreach}
-\cventry{\small{Aug 30th 2022}}{"Discos protoplanetarios, el origen de los mundos"}{Public talk, High School level}{Programa Ciencia Abierta, Par Explora RM Norte}{Liceo Bicentenario Provincial Santa Teresa de los Andes, Colina, Chile}{}
-\cventry{\small{Jul 23rd 2022}}{"How to feed baby stars"}{Public talk, General audience level}{Soapbox Science Munich}{Munich, Germany}{}
-\cventry{\small{Jul 2018 - Present}}{Member of "Cazadoras de Estrellas" Project}{DIRVEX, Universidad de Chile}{This outreach project is lead by a group of female graduate students and alumni from the Astronomy Department in Universidad de Chile. The goal is to give high school girls a hands-on experience with astronomical data and meet female astronomers so that they can solve any vocational doubts about this career}{}{}
-\cventry{\small{June 27th 2019}}{"Eclipses: Luces y Sombras en el Universo"}{Public talk, Middle School level}{Municipalidad de El Bosque}{Santiago, Chile}{}
-\cventry{\small{Apr 9th, 2019}}{"Astroinform\'atica para principiantes"}{Public talk, High School level}{DUOC UC Puente Alto}{Santiago, Chile}{}
-\cventry{\small{Mar 21st, 2019}}{"Astroinform\'atica para principiantes"}{Public talk, General Audience level}{Centro de Extensi\'on de la Universidad de Talca}{Talca, Chile}{}
-\cventry{\small{June 2018 - Nov 2018}}{Scientific Counselor}{Liceo Polivalente San Jos\'e de Maipo}{Festival de Teatro y Ciencias (FETYC)}{Par Explora Sur Oriente, CONICYT}{The FETYC is a theatre competition organized by the National Comission of Scientific and Technologic Investigation (CONICYT) where several schools prepare a play around a scientific inquiry. The Scientific Counselor guides the scientific content of the plays.}
-\cventry{\small{Mar 2018 - Aug 2018}}{Tourist Guide}{National Astronomical Observatory, Departamento de Astronom\'ia, Universidad de Chile}{}{}{}
-
-\section{Skills and Qualifications}
-\cvitem{\textbf{\small{Languages}}}{English (C1, TOEFL iBT: 113/120), Spanish (Native), German (A2)}
-\cvitem{\textbf{\small{Programming}}}{{Python}, {Java}, {C}, {Matlab/Octave}, {R}, {IDL}}
-\cvitem{\textbf{\small{Astronomy}}}{CASA (Common Astronomy Software Applications), GILDAS suite (mapping, class)}
-\cvitem{\textbf{\small{Version Controlling Tools}}}{GitHub (tere-valdivia)}
-
-\section{Funding and Awards}
-\cventry{\small{Jul 2018}}{Adelina Gutierrez Grant}{Sociedad Chilena de Astronom\'ia}{The grant funded the assistance to the Second Binational AAA-SOCHIAS Meeting}{}{}
-\cventry{\small{Mar 2018}}{Scholarship for National Master Studies}{Comisi\'on Nacional de Investigaci\'on en Ciencia y Tecnolog\'ia (CONICYT), Chile}{The scholarship funds master studies done in chilean universities}{}{}
-%\cventry{\small{2016-2017}}{Outstanding Student in the Bachelor of Science in Astronomy}{Universidad de Chile}{}{}{}
-
-\section{Service and Leadership}
-\cventry{\small{Apr 2019 - Apr 2020}}{Graduate Student Representative}{Departamento de Astronom\'ia}{Universidad de Chile}{Santiago, Chile}{}
-%\cventry{\small{Mar 2012 - Mar 2013}}{Social Service Comission Director}{Student Council}{Santiago College}{Santiago, Chile}{}
-%\cventry{\small{2005-2012}}{Scout Member}{Miembro del Grupo de Gu\'ias y Scouts del Santiago College}{Distrito Los Leones}{Santiago, Chile}{}
-
-
-\section{References}
-\cventry{}{\textbf{Prof. Dr. Paola Caselli}}{Ph.D in Astrophysics}{Director}{Max Planck Institut f\"{u}r Extraterrestrische Physik}{caselli@mpe.mpg.de}
-\cventry{}{\textbf{Prof. M\'onica Rubio}}{Ph.D in Astrophysics}{Full Professor}{Departamento de Astronom\'ia, Universidad de Chile}{mrubio@das.uchile.cl}
-
-    
+%-------------------------------------------------------------------------------
 \end{document}
